@@ -10,6 +10,9 @@ function tabs_update() {
             document.getElementById("prestige").className = "tab selected"
         else document.getElementById("prestige").className = "tab unlocked"
         document.getElementById("prestige").innerHTML = "PRESTIGE"
+        document.getElementById("prestige_Ltime").innerHTML =
+            "TIME&nbsp;IN&nbsp;PRESTIGE<br>" +
+            format_time(game.prestige_time_played, game.notation, true)
     } else {
         document.getElementById("prestige").className = "tab locked"
         document.getElementById("prestige").innerHTML = "LOCKED"
@@ -20,6 +23,9 @@ function tabs_update() {
             document.getElementById("ascension").className = "tab selected"
         else document.getElementById("ascension").className = "tab unlocked"
         document.getElementById("ascension").innerHTML = "ASCENSION"
+        document.getElementById("ascension_Ltime").innerHTML =
+            "TIME&nbsp;IN&nbsp;ASCENSION<br>" +
+            format_time(game.ascend_time_played, game.notation, true)
     } else {
         document.getElementById("ascension").className = "tab locked"
         document.getElementById("ascension").innerHTML = "LOCKED"
@@ -30,6 +36,9 @@ function tabs_update() {
             document.getElementById("collapse").className = "tab selected"
         else document.getElementById("collapse").className = "tab unlocked"
         document.getElementById("collapse").innerHTML = "COLLAPSE"
+        document.getElementById("collapse_Ltime").innerHTML =
+            "TIME&nbsp;IN&nbsp;COLLAPSE<br>" +
+            format_time(game.collapse_time_played, game.notation, true)
     } else {
         document.getElementById("collapse").className = "tab locked"
         document.getElementById("collapse").innerHTML = "LOCKED"
